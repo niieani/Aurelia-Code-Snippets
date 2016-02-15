@@ -30,7 +30,7 @@ export class SortValueConverter {
             if (config.numeric)
               return a[config.property] - b[config.property];
             else
-              return a[config.property] > b[config.property];
+              return a[config.property].localeCompare(b[config.property]);
         });
     }
 }
